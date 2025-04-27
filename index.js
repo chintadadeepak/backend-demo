@@ -50,6 +50,10 @@ app.get("/data", (req, res) => {
   res.json(githubData);
 });
 
+app.get("/github-profile", (req, res) => {
+  res.send(`<a href=${githubData.html_url}>Github Profile Link</a>`);
+});
+
 app.listen(PORT, () => {
   console.log(`SERVER STARTED, AND RUNNING ON PORT: ${PORT}`);
 });
